@@ -2,7 +2,7 @@
   "name": "word-of-the-day",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@1.22.19",
+  "packageManager": "yarn@1.22.19",
   "engines": {
     "node": ">=14",
     "yarn": ">=1.22.19"
