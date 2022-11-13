@@ -5,7 +5,7 @@
   import Button from "@smui/button";
   let open = false;
   export let data: {
-    words: Array<Prisma.Word>
+    words: Array<Prisma.Word>;
   };
   console.log("data: ", data);
 </script>
@@ -13,5 +13,5 @@
 <div style="display:flex; justify-content:space-between">
   <Button on:click={() => (open = true)}>Add New</Button>
 </div>
-<WordList words={data.words} loaded={true}/>
+<WordList words={data.words} loaded={true} />
 <NewWord {open} />

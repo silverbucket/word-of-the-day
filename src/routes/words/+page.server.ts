@@ -1,13 +1,13 @@
-import { Prisma, PrismaClient, Language } from '@prisma/client'
-const prisma = new PrismaClient()
+import { Prisma, PrismaClient, Language } from "@prisma/client";
+const prisma = new PrismaClient();
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load() {
-  console.log('connecting to prisma');
+  console.log("connecting to prisma");
   await prisma.$connect();
-  console.log('connected');
+  console.log("connected");
   const words = await prisma.word.findMany();
-  console.log('findmany: ', words);
+  console.log("findmany: ", words);
   // await prisma.word.create({
   //   data: {
   //     lang: Language.ENGLISH,
@@ -17,9 +17,9 @@ export async function load() {
   //     definition: "A word used as a placeholder in programming"
   //   }
   // })
-  console.log('disconnect')
+  console.log("disconnect");
   await prisma.$disconnect();
   return {
-    words: words
-  }
+    words: words,
+  };
 }
