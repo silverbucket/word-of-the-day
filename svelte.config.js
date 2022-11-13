@@ -1,5 +1,6 @@
 import adapter from "@sveltejs/adapter-auto";
 import preprocess from "svelte-preprocess";
+import { resolve } from "path";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -9,6 +10,11 @@ const config = {
 
   kit: {
     adapter: adapter(),
+    alias: {
+      $components: resolve('./src/components'),
+      $lib: resolve('./src/lib'),
+      $stores: resolve('./src/stores')
+    }
   },
 };
 

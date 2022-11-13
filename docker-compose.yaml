@@ -1,0 +1,16 @@
+version: '3'
+services:
+  wotd-db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 27017:27017
+      - 27018:27018
+    restart: unless-stopped
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=devuser
+      - MONGO_INITDB_ROOT_PASSWORD=devpass
+      - MONGO_INITDB_DATABASE=wordoftheday
+      - MONGO_REPLICA_HOST=localhost
+      - MONGO_REPLICA_PORT=27018

@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+enum Language {
+    CZECH
+    ENGLISH
+}
+
+model Word {
+    id  String  @id @default(auto()) @map("_id") @db.ObjectId
+    lang Language
+    name String
+    image String
+    translatesTo Word[] @relation("WordTranslations", fields: [translatesToId], references: [id])
+    translatesToId String[]    @db.ObjectId
+    translatesFrom Word[] @relation("WordTranslations", fields: [translatesFromId], references: [id])
+    translatesFromId String[]    @db.ObjectId
+    definition String
+    sentence String
+}
