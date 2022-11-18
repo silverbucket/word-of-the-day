@@ -4,8 +4,7 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "plugin:storybook/recommended",
+    "prettier"
   ],
   plugins: ["svelte3", "@typescript-eslint"],
   ignorePatterns: ["*.cjs"],
