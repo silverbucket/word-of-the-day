@@ -8,10 +8,12 @@
   export let loaded = false;
 </script>
 
+<navigation style="float: right;">
+  <a href="/words/new" class="mdc-button">Add New</a>
+</navigation>
 <DataTable table$aria-label="User list" style="width: 100%;">
   <Head>
     <Row>
-      <Cell numeric>ID</Cell>
       <Cell>Name</Cell>
       <Cell>Language</Cell>
       <Cell>Definition</Cell>
@@ -22,14 +24,13 @@
   <Body>
     {#each words as item (item.id)}
       <Row>
-        <Cell numeric>{item.id}</Cell>
         <Cell>{item.name}</Cell>
         <Cell>{item.lang}</Cell>
         <Cell>{item.definition}</Cell>
         <Cell>{item.sentence}</Cell>
         <Cell><img width="100" src={item.image?.[0]?.url} alt="" /></Cell>
         <Cell>
-          <a href={`/word/${item.id}`}>Edit</a>
+          <a class="mdc-button" href={`/words/${item.id}`}>Edit</a>
           <Button>Delete</Button>
         </Cell>
       </Row>
