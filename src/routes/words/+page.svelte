@@ -1,9 +1,11 @@
 <script lang="ts">
-  import { Prisma } from "@prisma/client";
+  import { onMount } from "svelte";
+  import { WordsStore } from "$stores/words/WordsStore";
   import WordList from "$components/WordList.svelte";
-  export let data: {
-    words: Array<Prisma.Word>;
-  };
+
+  onMount(async () => {
+    await WordsStore.load({lang: "en"});
+  });
 </script>
 
-<WordList words={data.words} loaded={true} />
+<WordList words={WordsStore} />

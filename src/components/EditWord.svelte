@@ -1,15 +1,15 @@
 <div>
-  <Title id="list-title">{word.name}</Title>
+  <Title id="list-title">{$word.data.name}</Title>
   <Content id="mandatory-content">
     <Card padded>
-      <Textfield variant="outlined" bind:value={word.name} label="Word">
+      <Textfield variant="outlined" bind:value={$word.data.name} label="Word">
         <HelperText slot="Title">Word to define</HelperText>
       </Textfield>
       <br />
       <div>
         <span>Image</span>
-        {#if word.image}
-          <img alt={word.name} src={word.image}/>
+        {#if $word.data.image}
+          <img alt={$word.name} src={$word.data.image}/>
         {/if}
       </div>
       <br />
@@ -17,18 +17,18 @@
         <label for="lang">
           Language:
         </label>
-        <span id="lang">{word.lang}</span>
+        <span id="lang">{$word.data.lang}</span>
       </div>
       <br />
-      <Textfield textarea input$maxlength={2500} bind:value={word.definition} label="Definition">
+      <Textfield textarea input$maxlength={2500} bind:value={$word.data.definition} label="Definition">
         <CharacterCounter slot="internalCounter">0 / 100</CharacterCounter>
       </Textfield>
       <br />
-      <Textfield textarea input$maxlength={2500} bind:value={word.sentence} label="Sentence">
+      <Textfield textarea input$maxlength={2500} bind:value={$word.data.sentence} label="Sentence">
         <CharacterCounter slot="internalCounter">0 / 100</CharacterCounter>
       </Textfield>
       <br />
-      <Button on:click={saveWord}>Save</Button>
+      <Button on:click={saveEvent}>Save</Button>
     </Card>
   </Content>
   <Actions>
@@ -37,15 +37,22 @@
 </div>
 
 <script lang="ts">
-  import { Prisma } from "@prisma/client";
   import { Title, Content, Actions } from "@smui/dialog";
   import Textfield from "@smui/textfield";
   import HelperText from "@smui/textfield/helper-text";
   import CharacterCounter from "@smui/textfield/character-counter";
   import Card from "@smui/card";
   import Button from "@smui/button";
+  import type { WordStore } from "$stores/words/WordStore";
+  import { createEventDispatcher } from "svelte";
 
-  export let word: Prisma.Word;
+  export let word: WordStore;
+  $: loaded = !word.loading;
 
-  function saveWord() {}
+  const dispatch = createEventDispatcher();
+
+  function saveEvent() {
+    console.log('SAVE EVENT');
+    dispatch('save');
+  }
 </script>

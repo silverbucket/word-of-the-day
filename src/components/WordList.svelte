@@ -2,10 +2,10 @@
   import DataTable, { Head, Body, Row, Cell } from "@smui/data-table";
   import LinearProgress from "@smui/linear-progress";
   import Button from "@smui/button";
-  import { Prisma } from "@prisma/client";
+  import { WordsStore } from "$stores/words/WordsStore";
 
-  export let words: Array<Prisma.Word> = [];
-  export let loaded = false;
+  export let words: WordsStore;
+  $: loaded = !words.loading;
 </script>
 
 <navigation style="float: right;">
@@ -22,7 +22,7 @@
     </Row>
   </Head>
   <Body>
-    {#each words as item (item.id)}
+    {#each $words.data as item (item.id)}
       <Row>
         <Cell>{item.name}</Cell>
         <Cell>{item.lang}</Cell>
