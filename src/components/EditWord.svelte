@@ -1,3 +1,25 @@
+<script lang="ts">
+  import { Title, Content, Actions } from "@smui/dialog";
+  import Textfield from "@smui/textfield";
+  import HelperText from "@smui/textfield/helper-text";
+  import CharacterCounter from "@smui/textfield/character-counter";
+  import Card from "@smui/card";
+  import Button from "@smui/button";
+  import type { WordStore } from "$stores/words/WordStore";
+  import { createEventDispatcher } from "svelte";
+
+  export let word: typeof WordStore;
+  $: loaded = !word.loading;
+
+  const dispatch = createEventDispatcher();
+
+  function saveEvent() {
+    console.log('SAVE EVENT');
+    dispatch('save');
+  }
+</script>
+
+
 <div>
   <Title id="list-title">{$word.data.name}</Title>
   <Content id="mandatory-content">
@@ -9,7 +31,7 @@
       <div>
         <span>Image</span>
         {#if $word.data.image}
-          <img alt={$word.name} src={$word.data.image}/>
+          <img alt={$word.data.name} src={$word.data.image}/>
         {/if}
       </div>
       <br />
@@ -35,24 +57,3 @@
     <a href="/words" class="mdc-button">Close</a>
   </Actions>
 </div>
-
-<script lang="ts">
-  import { Title, Content, Actions } from "@smui/dialog";
-  import Textfield from "@smui/textfield";
-  import HelperText from "@smui/textfield/helper-text";
-  import CharacterCounter from "@smui/textfield/character-counter";
-  import Card from "@smui/card";
-  import Button from "@smui/button";
-  import type { WordStore } from "$stores/words/WordStore";
-  import { createEventDispatcher } from "svelte";
-
-  export let word: WordStore;
-  $: loaded = !word.loading;
-
-  const dispatch = createEventDispatcher();
-
-  function saveEvent() {
-    console.log('SAVE EVENT');
-    dispatch('save');
-  }
-</script>

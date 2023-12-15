@@ -1,9 +1,13 @@
 # Word of the Day
 
-## Installation
+## Dev Setup
 
+### Dependencies
 ```bash
 pnpm i
 docker compose up -d
-pnpm dev
+```
+### Run
+```bash
+DATABASE_URL=mongodb://devuser:devpassword@localhost/wordoftheday pnpm dev
 ```

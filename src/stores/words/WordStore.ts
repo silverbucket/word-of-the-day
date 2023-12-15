@@ -4,11 +4,23 @@ import type { SingleRecordData, SingleRecord } from "$stores/base/SingleRecord";
 import type { Prisma } from "@prisma/client";
 import { Language } from "@prisma/client";
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export type Word = Prisma.Word;
 
-const DefaultWord: Word = {
+// export type Word = Prisma.Word;
+
+export interface Word {
+    id: string;
+    lang: Language;
+    name: string;
+    image: string;
+    translatesTo: string[];
+    translatesToId: string[];
+    translatesFrom: string[];
+    translatesFromId: string[];
+    definition: string,
+    sentence: string,
+}
+
+export const DefaultWord: Word = {
     id: "",
     lang: Language.CZECH,
     name: "",
@@ -29,6 +41,7 @@ const { subscribe, set } = writable(WordStoreDefaults);
 
 export const WordStore: SingleRecord<string, Word> = {
     subscribe,
+    set,
     load: async (id: string) => {
         if (!id) {
             return set({

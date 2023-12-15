@@ -22,10 +22,9 @@
         content,
         createdAt: Date.now(),
       }),
-    }).then((res) => {
-      res.json();
-      open = false;
     });
+    await res.json();
+    open = false;
   }
 </script>
 

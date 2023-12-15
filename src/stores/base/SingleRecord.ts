@@ -12,5 +12,6 @@ export interface SingleRecordData<S> extends SingleRecordError {
 export interface SingleRecord<P, S> {
     subscribe: Writable<SingleRecordData<S>>["subscribe"];
     load(params: P): Promise<void>;
+    set(params: P): Promise<void>;
     post(): Promise<void>;
 }

@@ -1,18 +1,9 @@
-import { error, json } from '@sveltejs/kit';
-import { Language, Prisma, PrismaClient } from "@prisma/client";
+import { json } from '@sveltejs/kit';
+import { PrismaClient } from "@prisma/client";
+import { DefaultWord } from "$stores/words/WordStore";
 const prisma = new PrismaClient();
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const newWord: Prisma.Word = {
-  name: "",
-  language: "",
-  sentence: "",
-  definition: "",
-  image: "",
-  translatesTo: [],
-  translatesFrom: []
-}
+const newWord = DefaultWord;
 
 /** @type {import('./$types').RequestHandler} */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
