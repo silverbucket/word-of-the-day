@@ -6,12 +6,11 @@ const prisma = new PrismaClient();
 const newWord = DefaultWord;
 
 /** @type {import('./$types').RequestHandler} */
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 export async function GET({ params }) {
-  let word = newWord;
-  console.log('params id: ', params);
-  if (params.id !== 'new') {
+  let word;
+  if (params.id === 'new') {
+    word = newWord;
+  } else {
     await prisma.$connect();
     word = await prisma.word.findUnique({
       where: {
@@ -27,8 +26,6 @@ export async function GET({ params }) {
 }
 
 /** @type {import('./$types').RequestHandler} */
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 export async function POST({ request }) {
   const body = await request.json();
   console.log('POST BODY: ', body)
