@@ -14,7 +14,7 @@ export async function GET({ url }) {
   if (lang === "en") {
     langEnum = Language.ENGLISH
   } else if (lang !== 'cz') {
-    throw error(400, "Invalid language specified");
+    error(400, "Invalid language specified");
   }
 
   const filter: any = [

@@ -5,7 +5,7 @@ import { error } from "@sveltejs/kit";
 // @ts-ignore
 export function load({ params }) {
   if (!params.id) {
-    throw error(404, "Not found");
+    error(404, "Not found");
   }
   return {
     id: params.id,
