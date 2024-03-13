@@ -32,8 +32,8 @@ devDependencies:
     specifier: 7.0.0-beta.15
     version: 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
   '@smui/textfield':
-    specifier: 7.0.0-beta.15
-    version: 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
+    specifier: 7.0.0-beta.17
+    version: 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
   '@sveltejs/adapter-auto':
     specifier: ^3.0.0
     version: 3.0.0(@sveltejs/kit@2.0.0)
@@ -973,6 +973,16 @@ packages:
       - typescript
     dev: true
 
+  /@smui/common@7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-nxipXxt9nn/hQK6phvxfv5nX6E8ZmsSiNGtlzPoMBlQz57rhFhHV0nDQOnnYALpuvkeCGOAhWjSQnGs7dGTotQ==}
+    dependencies:
+      '@material/dom': 14.0.0
+      svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - svelte
+      - typescript
+    dev: true
+
   /@smui/data-table@7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3):
     resolution: {integrity: sha512-qrwzKr7wtvHjfTZ25UdoUgcembV0EY2KBVhAuzpG7Jr4vI9aUvpJQhFPkoQy4Fh+Ic0jPK49cmSRx0ZG3W7vHw==}
     dependencies:
@@ -1013,6 +1023,17 @@ packages:
       - typescript
     dev: true
 
+  /@smui/floating-label@7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-Tq2tDn7agRNsPSrx1NL/rnCPBSdE0Zkl3acnhCF1ipVBSLCX26nH70tB7e4wvbi32EkPL4rU07kRdUxWg27AnQ==}
+    dependencies:
+      '@material/floating-label': 14.0.0
+      '@smui/common': 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
+      svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - svelte
+      - typescript
+    dev: true
+
   /@smui/icon-button@7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3):
     resolution: {integrity: sha512-Hvvv9w6hDCDOrSgxlcsXrCLOE8VJeTJ5Tu1n+FBqvIfetaF7ATXDwXx+raEznJ4kZK6CyoQTzMIr2rz4hxGiMA==}
     dependencies:
@@ -1031,6 +1052,17 @@ packages:
     dependencies:
       '@material/line-ripple': 14.0.0
       '@smui/common': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
+      svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - svelte
+      - typescript
+    dev: true
+
+  /@smui/line-ripple@7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-fNEePyciw+TFCVEP73WJUPPKaQy5nZd6fVwLZNAqgEo/l6P5UdvV52gD9TJvn9yo3mS+f0gqZp5hStZ/X6mEdA==}
+    dependencies:
+      '@material/line-ripple': 14.0.0
+      '@smui/common': 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
       svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
     transitivePeerDependencies:
       - svelte
@@ -1100,12 +1132,36 @@ packages:
       - typescript
     dev: true
 
+  /@smui/notched-outline@7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-dC7yd4gprmFHYiazedRgNlCn3yalQva2cwlztca0/GVia4k8/KZTp46hweILE7z9uR87OBTLUBiv1w6R2y3zqg==}
+    dependencies:
+      '@material/notched-outline': 14.0.0
+      '@smui/common': 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/floating-label': 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
+      svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - svelte
+      - typescript
+    dev: true
+
   /@smui/ripple@7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3):
     resolution: {integrity: sha512-l0c94p60gxbsClH0KzA2meJ2IGHc7ZUMyWqODkLNz7ziUYxk3VZvWf/Y7Ca+64IJj0keCGPMpFauFaJO8h3Gtw==}
     dependencies:
       '@material/dom': 14.0.0
       '@material/ripple': 14.0.0
       '@smui/common': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
+      svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - svelte
+      - typescript
+    dev: true
+
+  /@smui/ripple@7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-OrUxhF7p9QaiXE4zyfm1tLOWtf7gj6RabwResG5pBB7zh/Ohtq5o11pEFNugANDCz1NmQ6uWhlteB/W6lKcqmg==}
+    dependencies:
+      '@material/dom': 14.0.0
+      '@material/ripple': 14.0.0
+      '@smui/common': 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
       svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
     transitivePeerDependencies:
       - svelte
@@ -1134,19 +1190,19 @@ packages:
       - typescript
     dev: true
 
-  /@smui/textfield@7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3):
-    resolution: {integrity: sha512-98lGaVJRH3K5aXVUAa8o/8rHRQ/Vwu9q6phupSrPW4BEmEEEezb/fzKExTOgm0c241dy4nDRLkdH9IdtObTA8w==}
+  /@smui/textfield@7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-1Ryc+Us+MOV+9rEfkn4KAtL6O/5TkdTCHC/FlX4kRucZ7Y2WORTif55D9E/6M+hJHMabBU3ZmH73gylaSOBY2w==}
     dependencies:
       '@material/dom': 14.0.0
       '@material/feature-targeting': 14.0.0
       '@material/ripple': 14.0.0
       '@material/rtl': 14.0.0
       '@material/textfield': 14.0.0
-      '@smui/common': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
-      '@smui/floating-label': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
-      '@smui/line-ripple': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
-      '@smui/notched-outline': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
-      '@smui/ripple': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/common': 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/floating-label': 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/line-ripple': 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/notched-outline': 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/ripple': 7.0.0-beta.17(svelte@4.2.8)(typescript@5.3.3)
       svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
     transitivePeerDependencies:
       - svelte
