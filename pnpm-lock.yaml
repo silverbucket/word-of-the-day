@@ -20,8 +20,8 @@ devDependencies:
     specifier: 7.0.0-beta.15
     version: 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
   '@smui/card':
-    specifier: 7.0.0-beta.15
-    version: 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
+    specifier: 7.0.0-beta.18
+    version: 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
   '@smui/data-table':
     specifier: 7.0.0-beta.15
     version: 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
@@ -937,14 +937,31 @@ packages:
       - typescript
     dev: true
 
-  /@smui/card@7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3):
-    resolution: {integrity: sha512-fGBpgmO3N5kDz5oTFxqIF++ks8/h9I1ef0yD2OgyTYQ5vzYb+N/5NRmjV9g8QitPV2BRYeRLkrOYfn3nnjOCBg==}
+  /@smui/button@7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-7RRrM49qRuLQazwOblGSqW/KPyzGI6zyH/nezzcEgItnz33rtRx7uRQUNUsknroPE2lGSx2wbuWxQz+ZIkSiPQ==}
+    dependencies:
+      '@material/button': 14.0.0
+      '@material/elevation': 14.0.0
+      '@material/feature-targeting': 14.0.0
+      '@material/ripple': 14.0.0
+      '@material/shape': 14.0.0
+      '@material/theme': 14.0.0
+      '@smui/common': 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/ripple': 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
+      svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - svelte
+      - typescript
+    dev: true
+
+  /@smui/card@7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-A37m5Uuuu32kHuaoumuDHct2EHxEVmUPtbH3asqNki/UptCimqgx0LFVU7zSCCXx3T3rFtVX6ECTG0wv3dZCzA==}
     dependencies:
       '@material/card': 14.0.0
-      '@smui/button': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
-      '@smui/common': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
-      '@smui/icon-button': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
-      '@smui/ripple': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/button': 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/common': 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/icon-button': 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/ripple': 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
       svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
     transitivePeerDependencies:
       - svelte
@@ -965,6 +982,16 @@ packages:
 
   /@smui/common@7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3):
     resolution: {integrity: sha512-mrK7B75L9so6EtzRolkAZkatC1sKHAP+gvIjU+JSfmSJnaRuglTS5ZTcosEmP759GA7E4scAQtOY1Qw7BgVO/g==}
+    dependencies:
+      '@material/dom': 14.0.0
+      svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - svelte
+      - typescript
+    dev: true
+
+  /@smui/common@7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-BH70iF23eGKK57YReDG5nerJR/7lomncVAcKCJ35KEso90S+eu7lZwDg5kUdzVzDRNdS+WkTrDKPhKmo3R2sEQ==}
     dependencies:
       '@material/dom': 14.0.0
       svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
@@ -1020,6 +1047,19 @@ packages:
       '@material/icon-button': 14.0.0
       '@smui/common': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
       '@smui/ripple': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
+      svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - svelte
+      - typescript
+    dev: true
+
+  /@smui/icon-button@7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-wLrUUdukOr78NKiRK9N6L3FJXvCpzY6DeZij9C4KlIhvrakeiCjWLEUtHYlIsdQfCE5PZkqGmOUAPWj3lEu0Ug==}
+    dependencies:
+      '@material/density': 14.0.0
+      '@material/icon-button': 14.0.0
+      '@smui/common': 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/ripple': 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
       svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
     transitivePeerDependencies:
       - svelte
@@ -1106,6 +1146,18 @@ packages:
       '@material/dom': 14.0.0
       '@material/ripple': 14.0.0
       '@smui/common': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
+      svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - svelte
+      - typescript
+    dev: true
+
+  /@smui/ripple@7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-HegU/75nnaORFwrhojzeyYW4M9FD1nh59zgaWkw3lJK61wbo3bPmIkjPnytpItZXW4GsZfTRJ1ooCr9iiX1otQ==}
+    dependencies:
+      '@material/dom': 14.0.0
+      '@material/ripple': 14.0.0
+      '@smui/common': 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
       svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
     transitivePeerDependencies:
       - svelte
