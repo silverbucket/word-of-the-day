@@ -21,7 +21,7 @@
     "@playwright/test": "1.40.1",
     "@smui/button": "7.0.0-beta.15",
     "@smui/card": "7.0.0-beta.15",
-    "@smui/data-table": "7.0.0-beta.15",
+    "@smui/data-table": "7.0.0-beta.18",
     "@smui/dialog": "7.0.0-beta.15",
     "@smui/linear-progress": "7.0.0-beta.15",
     "@smui/textfield": "7.0.0-beta.15",
