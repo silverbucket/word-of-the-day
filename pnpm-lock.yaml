@@ -26,8 +26,8 @@ devDependencies:
     specifier: 7.0.0-beta.15
     version: 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
   '@smui/dialog':
-    specifier: 7.0.0-beta.15
-    version: 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
+    specifier: 7.0.0-beta.18
+    version: 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
   '@smui/linear-progress':
     specifier: 7.0.0-beta.15
     version: 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
@@ -973,6 +973,16 @@ packages:
       - typescript
     dev: true
 
+  /@smui/common@7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-BH70iF23eGKK57YReDG5nerJR/7lomncVAcKCJ35KEso90S+eu7lZwDg5kUdzVzDRNdS+WkTrDKPhKmo3R2sEQ==}
+    dependencies:
+      '@material/dom': 14.0.0
+      svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
+    transitivePeerDependencies:
+      - svelte
+      - typescript
+    dev: true
+
   /@smui/data-table@7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3):
     resolution: {integrity: sha512-qrwzKr7wtvHjfTZ25UdoUgcembV0EY2KBVhAuzpG7Jr4vI9aUvpJQhFPkoQy4Fh+Ic0jPK49cmSRx0ZG3W7vHw==}
     dependencies:
@@ -989,13 +999,13 @@ packages:
       - typescript
     dev: true
 
-  /@smui/dialog@7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3):
-    resolution: {integrity: sha512-5N2/cf+2ObVYXb9rzLJQ2juykNgB/T0je4f12zWQt/PYc8ZhLcZ4+eCz7pUSj02dDXo5pRmBXAkPeYmy26iPXQ==}
+  /@smui/dialog@7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3):
+    resolution: {integrity: sha512-vAHyUMCOper0NqcV1umVuvGvLxIsQ3wExiON2oz21kAISX5o0GQG52fS4U0llK+Q9M+nxhIl32BnWN4TtoyZNg==}
     dependencies:
       '@material/button': 14.0.0
       '@material/dialog': 14.0.0
       '@material/dom': 14.0.0
-      '@smui/common': 7.0.0-beta.15(svelte@4.2.8)(typescript@5.3.3)
+      '@smui/common': 7.0.0-beta.18(svelte@4.2.8)(typescript@5.3.3)
       svelte2tsx: 0.6.27(svelte@4.2.8)(typescript@5.3.3)
     transitivePeerDependencies:
       - svelte
